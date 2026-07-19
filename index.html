@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRSS Botanica | ЕАО</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #ddd;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 820px;
+            width: 100%;
+            background: #111;
+            border-radius: 28px;
+            padding: 30px 25px;
+            box-shadow: 0 0 30px rgba(0, 200, 100, 0.08);
+            border: 1px solid #1e2a1e;
+        }
+        h1 {
+            font-size: 2.8em;
+            text-align: center;
+            color: #8bc34a;
+            letter-spacing: 2px;
+            font-weight: 300;
+            border-bottom: 1px solid #2a3a2a;
+            padding-bottom: 18px;
+            margin-bottom: 20px;
+        }
+        h1 span {
+            font-weight: 700;
+            color: #b5e48c;
+        }
+        .tagline {
+            text-align: center;
+            color: #6a8f5a;
+            font-size: 0.95em;
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        .item {
+            background: #171f17;
+            padding: 22px 20px;
+            border-radius: 18px;
+            border-left: 5px solid #7cb342;
+            margin-bottom: 25px;
+        }
+        .item h2 {
+            font-size: 1.7em;
+            color: #c8e6c9;
+            font-weight: 400;
+        }
+        .item .sub {
+            color: #8a9a8a;
+            font-size: 0.9em;
+            margin: 6px 0 12px 0;
+        }
+        .item ul {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 16px 0;
+        }
+        .item ul li {
+            padding: 5px 0;
+            color: #b0bca0;
+            font-size: 0.95em;
+            border-bottom: 1px solid #1f2a1f;
+        }
+        .item ul li::before {
+            content: "🌱 ";
+            color: #7cb342;
+        }
+        .price-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        .price {
+            font-size: 2em;
+            font-weight: 700;
+            color: #b5e48c;
+        }
+        .price small {
+            font-size: 0.5em;
+            color: #7a8f7a;
+            font-weight: 300;
+        }
+        .badge {
+            background: #2a3a2a;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.8em;
+            color: #b5e48c;
+            border: 1px solid #3a5a3a;
+        }
+        .how-it-works {
+            background: #0f170f;
+            padding: 18px 20px;
+            border-radius: 18px;
+            margin: 25px 0;
+            border: 1px dashed #3a5a3a;
+        }
+        .how-it-works h3 {
+            color: #b5e48c;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 10px 0;
+            border-bottom: 1px solid #1a251a;
+        }
+        .step-num {
+            background: #1e2e1e;
+            color: #8bc34a;
+            width: 34px;
+            height: 34px;
+            min-width: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95em;
+        }
+        .step-text {
+            color: #bccbb0;
+        }
+        .step-text strong {
+            color: #d4e8c4;
+        }
+        .contact {
+            background: #1a241a;
+            padding: 18px;
+            border-radius: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #8bc34a;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+        .contact a:hover {
+            color: #b5e48c;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.8em;
+            color: #4a5a4a;
+        }
+        .note {
+            text-align: center;
+            color: #5a6a5a;
+            font-size: 0.85em;
+            margin-top: 15px;
+        }
+        .warning {
+            text-align: center;
+            color: #e8b87a;
+            font-weight: 700;
+            font-size: 1em;
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+        .geo {
+            background: #0f170f;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 10px;
+            color: #7a9a7a;
+            font-size: 0.9em;
+            border: 1px solid #1e2e1e;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            .price { font-size: 1.6em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>🌿 KRSS <span>BOTANICA</span></h1>
+    <div class="tagline">— Работаем по ЕАО —</div>
+
+    <div class="item">
+        <h2>🌱 Ботаника премиум-класса</h2>
+        <div class="sub">Коллекционные образцы, ручной уход</div>
+        <ul>
+            <li>Только свежие экземпляры, высший сорт</li>
+            <li>Минимальный заказ — 1 грамм</li>
+            <li>Работаем только по Еврейской автономной области</li>
+            <li>Строго по предоплате 100%</li>
+        </ul>
+        <div class="price-box">
+            <span class="price">2250 ₽ <small>/ грамм</small></span>
+            <span class="badge">🌱 в наличии</span>
+        </div>
+    </div>
+
+    <div class="item">
+        <h2>🍃 Лирика</h2>
+        <div class="sub">Отдельный сорт, только по предзаказу</div>
+        <ul>
+            <li>Упаковка — 5 штук</li>
+            <li>Высокое качество, ручной контроль</li>
+            <li>Доступно только по ЕАО</li>
+        </ul>
+        <div class="price-box">
+            <span class="price">2500 ₽ <small>/ 5 шт</small></span>
+            <span class="badge">🌿 предзаказ</span>
+        </div>
+    </div>
+
+    <div class="how-it-works">
+        <h3>📦 Как это работает</h3>
+        <div class="step">
+            <span class="step-num">1</span>
+            <span class="step-text"><strong>Связь</strong> — пишешь в Telegram <strong>@gah9999</strong></span>
+        </div>
+        <div class="step">
+            <span class="step-num">2</span>
+            <span class="step-text"><strong>Оплата</strong> — USDT / BTC / XMR (100% предоплата)</span>
+        </div>
+        <div class="step">
+            <span class="step-num">3</span>
+            <span class="step-text"><strong>Координаты и фото</strong> — после оплаты получаешь точку и <strong>фото места</strong>, где лежит клад</span>
+        </div>
+        <div class="step">
+            <span class="step-num">4</span>
+            <span class="step-text"><strong>Приходишь</strong> — на место и забираешь товар</span>
+        </div>
+    </div>
+
+    <div class="geo">
+        📍 Работаем только по Еврейской автономной области. Без доставки.
+    </div>
+
+    <div class="contact">
+        📩 Связь: <a href="https://t.me/gah9999" target="_blank">Telegram @gah9999</a>
+    </div>
+
+    <div class="warning">
+        ⚠️ Только самовывоз. Координаты и фото места выдаются после оплаты.
+    </div>
+
+    <div class="footer">
+        ⚡ Оплата: USDT / BTC / XMR<br>
+        ❗ Работаем строго по предоплате
+    </div>
+
+    <div class="note">
+        По всем вопросам — только Telegram. В общих чатах не обсуждаем.
+    </div>
+
+</div>
+</body>
+</html>
